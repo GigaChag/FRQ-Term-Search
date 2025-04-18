@@ -9,13 +9,22 @@ By Andrew Segerlind
 
 
 import selenium
-import selenium.webdriver
-import selenium.webdriver.chrome
+from selenium import webdriver
 import toml
 
 
 def main():
     config = read_config_toml()
 
-    driver = selenium.webdriver.chrome()
-    
+    driver = webdriver.Chrome()
+
+    loop_through_years(driver, config)
+
+
+def read_config_toml():
+    pass
+
+
+def loop_through_years(driver: webdriver, config: list):
+    """Iterates through a desired number of years of college board frqs and opens their acordian menus"""
+    pass
